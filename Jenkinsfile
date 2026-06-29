@@ -1,9 +1,10 @@
 pipeline {
     agent any
+
     stages {
-        stage('hello name') {
+        stage('Print Branch') {
             steps {
-                sh 'this is ${GIT_BRANCH}'
+                sh 'echo $BRANCH_NAME'
             }
         }
     }
