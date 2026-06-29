@@ -1,16 +1,10 @@
 pipeline {
     agent any
+
     stages {
-        stage('hello name') {
+        stage('Print Branch') {
             steps {
-                sh "chmod +x hello.sh" 
-                sh "./hello.sh mohammed"
-            }
-        }
-        stage('Hello object') {
-            steps {
-                sh "chmod +x hello.sh"
-                sh "./hello.sh jenkins"
+                sh 'echo $BRANCH_NAME'
             }
         }
     }
